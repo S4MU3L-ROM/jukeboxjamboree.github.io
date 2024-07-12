@@ -4,7 +4,7 @@ const Video = () => (
     <div className="video relative h-[20rem] overflow-hidden">
         <div className="overlay absolute inset-0 bg-gradient-to-r from-purple-dark to-teal flex items-center justify-center text-white">
             <div>
-                <h2 className="text-7xl">Jukebox Jamboree</h2>
+                <h2 className="text-7xl">Jukebox Jamboree Fest</h2>
                 <p className="text-white text-2xl p-2">Julio 2024, Bogotá</p>
             </div>
         </div>
