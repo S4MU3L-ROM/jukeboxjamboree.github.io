@@ -22,7 +22,7 @@ const Lineup = () => {
                             19:00 | <span>Mick Jagger (The Rolling Stones)</span>
                         </li>
                         <li>
-                            18:00 | <span>Zack de la Rocha (Rage Against The Machine)</span>
+                            18:00 | <span>Zack de la Rocha</span>
                         </li>
                         <li>
                             17:00 | <span>ARTBAT</span>
