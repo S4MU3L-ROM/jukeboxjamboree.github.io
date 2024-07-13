@@ -1,7 +1,14 @@
+import {nextui} from "@nextui-org/react";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false, // or 'media' or 'class',
+  content: [
+    // ...
+    // make sure it's pointing to the ROOT node_module
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -27,6 +34,6 @@ export default {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [nextui()],
 }
 

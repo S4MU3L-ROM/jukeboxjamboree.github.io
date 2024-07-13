@@ -4,19 +4,24 @@ import AboutFestival from './components/AboutFestival';
 import Lineup from './components/Lineup';
 import Galeria from './components/Galeria';
 import Boletos from './components/Boletos';
+import Acor from "./components/Acordion.jsx";
 import Footer from "./components/Footer.jsx";
+import {NextUIProvider} from "@nextui-org/react";
 
 const App = () => {
     return (
-        <div className="bg-purple-light">
-            <Header />
-            <Video />
-            <AboutFestival />
-            <Lineup />
-            <Galeria id="galeria" />
-            <Boletos/>
-            <Footer/>
-        </div>
+        <NextUIProvider>
+            <div className="bg-purple-light">
+                <Header />
+                <Video />
+                <AboutFestival />
+                <Lineup />
+                <Galeria id="galeria" />
+                <Boletos/>
+                <Acor/>
+                <Footer/>
+            </div>
+        </NextUIProvider>
     );
 }
 
