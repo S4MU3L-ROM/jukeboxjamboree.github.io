@@ -29,7 +29,31 @@ export default {
           dark: '#374151',
         },
       },
-    },
+      transformStyle: { '3d': 'preserve-3d' },
+      backfaceVisibility: { hidden: 'hidden' },
+      rotateY: {
+        '0': '0',
+        '180': '180deg',
+        '-180': '-180deg'
+      },
+      perspective: {
+        '1000': '1000px'
+      },
+      keyframes: {
+        flipToBack: {
+          '0%, 100%': { transform: 'rotateY(0)' },
+          '100%': { transform: 'rotateY(180deg)' },
+        },
+        flipToFront: {
+          '0%, 100%': { transform: 'rotateY(-180deg)' },
+          '100%': { transform: 'rotateY(0)' },
+        },
+      },
+      animation: {
+        flipToBack: 'flipToBack 0.8s forwards',
+        flipToFront: 'flipToFront 0.8s forwards',
+      }
+    }
   },
   variants: {
     extend: {},

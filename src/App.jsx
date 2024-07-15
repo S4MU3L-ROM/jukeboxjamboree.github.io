@@ -1,28 +1,32 @@
+import React, {useEffect, useState} from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Video from './components/Video';
-import AboutFestival from './components/AboutFestival';
-import Lineup from './components/Lineup';
-import Galeria from './components/Galeria';
-import Boletos from './components/Boletos';
-import Acor from "./components/Acordion.jsx";
-import Footer from "./components/Footer.jsx";
-import {NextUIProvider} from "@nextui-org/react";
+import MainContent from './components/MainContent'; // Componente que incluye Video, AboutFestival, etc.
+import LoginRegisterCard from './components/LoginRegisterCard.jsx';
+import { NextUIProvider } from "@nextui-org/react";
 
 const App = () => {
+    const [message, setMessage] = useState('');
+
+    useEffect(() => {
+        fetch('http://localhost:3000/users')
+            .then(response => response.json())
+            .then(data => setMessage(data.message))
+            .catch(error => console.error('Error:', error));
+    }, []);
+
     return (
         <NextUIProvider>
-            <div className="bg-purple-light">
-                <Header />
-                <Video />
-                <AboutFestival />
-                <Lineup />
-                <Galeria id="galeria" />
-                <Boletos/>
-                <Acor/>
-                <Footer/>
-            </div>
+            <Router>
+                    <Header />
+                    <Routes>
+                        <Route path="/" element={<MainContent />} />
+                        <Route path="/LoginRegister" element={<LoginRegisterCard />} />
+                    </Routes>
+
+            </Router>
         </NextUIProvider>
     );
-}
+};
 
 export default App;

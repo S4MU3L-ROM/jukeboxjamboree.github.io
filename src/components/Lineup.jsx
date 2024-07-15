@@ -156,22 +156,67 @@ const Lineup = () => {
 
                     <ul className="calendario">
                         <li>
-                            24:00 | Reinier Zonneveld
+                            <Acor
+                                title = '24:00 | Rubén Albarrán (Café Tacvba)'
+                                root = 'src/img/artistas/Ruben.jpg'
+                                alt = ' Rubén Albarrán'
+                                defaultContent = 'Rubén Albarrán, líder de Café Tacvba, es un faro musical con presencia escénica única. Su capacidad de reinventarse
+                                en cada álbum y su voz multifacética, desde arrullos cristalinos hasta gruñidos intensos, lo hacen excepcional. En vivo, mezcla humor,
+                                baile, orgullo nativo y mística del rock latino.'
+                            />
+
                         </li>
                         <li>
-                            22:00 | Eric Prydz
+                            <Acor
+                                title = '17:00 | Dave Grohl (Foo Fighters)'
+                                root = 'src/img/artistas/Dave.jpg'
+                                alt = 'Dave Grohl'
+                                defaultContent = 'Dave Grohl, líder reconocido tanto por su nombre como por su banda, es conocido por su versatilidad musical. Desde
+                                Nirvana hasta Foo Fighters, demuestra ser un camaleón en el escenario. Aún más notable, mantiene su reputación como el chico más amigable
+                                del rock.'
+                            />
                         </li>
                         <li>
-                            20:00 | Deadmau5
+                            <Acor
+                                title = '20:00 | Serj Tankian (System of a Down)'
+                                root = 'src/img/artistas/Serj.jpg'
+                                alt = 'Serj Tankian'
+                                defaultContent = 'Serj Tankian de System of a Down es conocido por su intensidad gutural en canciones como "Chop Suey!" y "B.Y.O.B.", equilibrando
+                                con melodías suaves. Esta dualidad refleja su comentario político y social, arrullando a los fans antes de confrontar realidades injustas.'
+                            />
+
                         </li>
                         <li>
-                            19:00 | Joris Voorn
+                            <Acor
+                                title = '19:00 | Liam Gallagher (Oasis)'
+                                root = 'src/img/artistas/Liam.jpg'
+                                alt = 'Liam Gallagher'
+                                defaultContent = 'Liam Gallagher fue sin duda descarado al declarar "esta noche soy una estrella del rock and roll" en el debut de Oasis,
+                                Definitely Maybe (1994). Su entrega definió los años 90, siendo su arrogancia en y fuera del escenario el espíritu animal del britpop.'
+                            />
+
                         </li>
                         <li>
-                            18:00 | Nina Kraviz
+                            <Acor
+                                title = '18:00 | Paul McCartney (The Beatles)'
+                                root = 'src/img/artistas/Paul.jpg'
+                                alt = 'Paul McCartney '
+                                defaultContent = 'El estereotipo de que Paul McCartney era el Beatle más pop y John Lennon el rocker no cuenta toda la historia. Paul
+                                lideró en baladas y también en temas de rock como "A Hard Day’s Night", "Helter Skelter" y "Back in the USSR".'
+                            />
+
                         </li>
                         <li>
-                            17:00 | Argy
+                            <Acor
+                                title = '17:00 | Gwen Stefani (No Doubt)'
+                                root = 'src/img/artistas/Gwen.jpg'
+                                alt = 'Gwen Stefani'
+                                defaultContent = 'Gwen Stefani va más allá de ser solo una estrella pop; es más una figura de rock que de alfombra roja. Su presencia
+                                en el escenario y su voz elástica fusionan vulnerabilidad, ira, feminidad y vanguardia, junto con su estética ska punk icónica, haciéndola
+                                un modelo perdurable globalmente.'
+                            />
+
+
                         </li>
                     </ul>
                 </div>
@@ -181,22 +226,67 @@ const Lineup = () => {
 
                     <ul className="calendario">
                         <li>
-                            24:00 | Armin Van Buuren
+                            <Acor
+                                title = '24:00 | Twenty One Pilots'
+                                root = 'src/img/artistas/Twenty.jpg'
+                                alt = 'Twenty One Pilots'
+                                defaultContent = 'Es un dúo musical estadounidense de Columbus, Ohio, formado en 2009 por Tyler Joseph con Nick Thomas y Chris Salih, quienes
+                                 se retiraron en 2011. Alcanzaron fama en 2010 con lanzamientos independientes y tours. Actualmente, la banda está compuesta por Tyler Joseph
+                                 y el baterista Josh Dun.'
+                            />
                         </li>
                         <li>
-                            22:00 | Calvin Harris
+                            <Acor
+                                title = '22:00 | Depeche Mode'
+                                root = 'src/img/artistas/Depeche.jpg'
+                                alt = 'Depeche Mode'
+                                defaultContent = 'Considerado el mejor en su género, este grupo synthpop surgió en 1981 como líder del movimiento New Romantic. Evolucionaron
+                                 hacia un sonido más duro con samplers, alcanzando su cúspide artística con los álbumes Violator y Songs of Faith and Devotion en los años 90,
+                                 consolidándose como un grupo de calidad con letras oscuras cautivadoras.'
+                            />
                         </li>
                         <li>
-                            20:00 | Hardwell
+                            <Acor
+                                title = '20:00 | The Chainsmokers'
+                                root = 'src/img/artistas/Chainsmokers.jpg'
+                                alt = 'The Chainsmokers'
+                                defaultContent = 'Formados en 2012, The Chainsmokers ganaron reconocimiento en 2014 con "Selfie", llegando al top 20 global. Han ganado un Grammy,
+                                dos American Music Awards, siete Billboard y nueve iHeartRadio Music Awards. En 2019, Forbes los nombró los DJs mejor pagados del mundo, destronando
+                                a Calvin Harris tras 6 años..'
+                            />
                         </li>
                         <li>
-                            19:00 | Above & Beyond
+                            <Acor
+                                title = '19:00 | Disclosure'
+                                root = 'src/img/artistas/Disclosure.jpg'
+                                alt = 'Disclosure'
+                                defaultContent = 'Disclosure es un dúo británico de música electrónica, conocido por su enfoque en deep house y garage house. Conformado por los
+                                hermanos Guy y Howard Lawrence, su álbum "Settle" (2013) captura el sonido garage contemporáneo con éxitos como "Latch" y "White Noise", consolidándolos
+                                como innovadores en la música electrónica.'
+                            />
+
                         </li>
                         <li>
-                            18:00 | Diplo
+                            <Acor
+                                title = '18:00 | Marshmello'
+                                root = 'src/img/artistas/Marsh.jpg'
+                                alt = 'Marshmello'
+                                defaultContent = 'Marshmello es un DJ y productor de Future Bass, Trap y Electro House. Ganó fama remixando canciones de Jack Ü y Zedd. Su tema
+                                "Alone" llegó al Billboard Hot 100. Ha colaborado con Ookay, Jauz, Slushii y Omar Linx. A pesar de su anonimato, ha recibido múltiples reconocimientos
+                                internacionales desde su debut en 2015.'
+                            />
+
                         </li>
                         <li>
-                            17:00 | Steve Angello
+                            <Acor
+                                title = '17:00 | The Chemical Brothers'
+                                root = 'src/img/artistas/Chemical.jpg'
+                                alt = 'The Chemical Brothers'
+                                defaultContent = 'The Chemical Brothers, dúo inglés de música electrónica formado por Tom Rowlands y Ed Simons, se conocieron en la universidad. Su influencia
+                                 ecléctica y su contribución al big beat junto con otros como The Prodigy y Fatboy Slim han sido fundamentales en la electrónica, destacándose por mejorar estilos
+                                 existentes.'
+                            />
+
                         </li>
                     </ul>
                 </div>
