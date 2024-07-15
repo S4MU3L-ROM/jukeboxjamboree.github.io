@@ -8,7 +8,7 @@ const CompraModal = ({ show, onClose, tipoPase, precio }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(`Nombre: ${nombre}\nCantidad de boletos: ${cantidad}`);
+        alert(`Cantidad de boletos: ${cantidad}`);
         onClose();
     };
 
@@ -21,24 +21,6 @@ const CompraModal = ({ show, onClose, tipoPase, precio }) => {
                 </div>
                 <p className="mb-4">Estás comprando el {tipoPase} por {precio}.</p>
                 <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                        <label className="block text-sm font-bold mb-2">Nombre</label>
-                        <input
-                            type="text"
-                            className="w-full border rounded py-2 px-3"
-                            value={nombre}
-                            onChange={(e) => setNombre(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-sm font-bold mb-2">Email</label>
-                        <input
-                            type="email"
-                            className="w-full border rounded py-2 px-3"
-                            required
-                        />
-                    </div>
                     <div className="mb-4">
                         <label className="block text-sm font-bold mb-2">Cantidad</label>
                         <input

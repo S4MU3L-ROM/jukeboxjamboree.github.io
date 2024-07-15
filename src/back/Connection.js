@@ -8,15 +8,18 @@ const dbConfig = {
 };
 
 // Función para obtener todos los usuarios
-async function fetchUsers() {
+export async function fetchUsers(id) {
     let connection;
 
     try {
         connection = await oracledb.getConnection(dbConfig);
         console.log('Connected to Oracle Database successfully.');
 
-        const sql = 'SELECT USER_ID, NAME, EMAIL, PASSWORD FROM users';
-        const result = await connection.execute(sql, {}, {
+        // Utiliza el marcador de posición :id para Oracle en lugar de ?
+        const sql = 'SELECT USER_ID, NAME, EMAIL, PASSWORD FROM users WHERE USER_ID = :id';
+
+        // Asegúrate de que los parámetros sean pasados correctamente como un array o objeto
+        const result = await connection.execute(sql, [id], { // Pasa el ID como un array
             outFormat: oracledb.OUT_FORMAT_OBJECT
         });
 
@@ -36,6 +39,37 @@ async function fetchUsers() {
         }
     }
 }
+export async function insertUser(user_id, name, email, password) {
+    let connection;
 
-export default fetchUsers;
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        console.log('Connected to Oracle Database successfully.');
+
+        const sql = `
+            INSERT INTO users (USER_ID, NAME, EMAIL, PASSWORD) VALUES (:user_id, :name, :email, :password)
+        `;
+        const result = await connection.execute(sql, {
+            user_id,
+            name,
+            email,
+            password
+        }, { autoCommit: true });
+
+        console.log("Rows inserted:", result.rowsAffected);  // Debería mostrar '1' si se insertó un registro
+        return result;
+    } catch (err) {
+        console.error('Error connecting to the database', err);
+        throw err;  // Re-throw the error for caller to handle
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+                console.log('Connection closed successfully.');
+            } catch (err) {
+                console.error('Error closing the connection', err);
+            }
+        }
+    }
+}
 

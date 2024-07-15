@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
-
-const LoginRegisterCard = () => {
+import { useNavigate } from 'react-router-dom';
+const LoginRegisterCard = ({setShowLoginLink }) => {
     const [isFlipped, setIsFlipped] = useState(false);
+    const navigate = useNavigate();
 
     const handleFlip = () => {
         setIsFlipped(!isFlipped);
         console.log(isFlipped)
     };
+    const handleSubmit = () => {
+        alert('Inicio de sesión exitoso!');
+        setShowLoginLink(false);  // Oculta el enlace de Login en el Header
+        navigate('/')
+    };
+    const handleRegi= () => {
+        setIsFlipped(!isFlipped);
+        console.log(isFlipped)
+        alert('Registro exitoso!');
+    };
+
 
     return (
         <div className="relative w-96 h-150 mx-auto my-52 border-3 ">
@@ -22,8 +34,8 @@ const LoginRegisterCard = () => {
                             <button className="mt-3 bg-blue-500 text-white px-4 py-2 rounded"
                                     onClick={handleFlip}>REGISTER
                             </button>
-                            <button className="mt-3 bg-blue-500 text-white px-4 py-2 rounded">
-                                LOGIN
+                            <button className="mt-3 bg-blue-500 text-white px-4 py-2 rounded"  onClick={handleSubmit}>
+                               LOGIN
                             </button>
                         </div>
                     </div>
@@ -32,11 +44,15 @@ const LoginRegisterCard = () => {
                 <div
                     className={`absolute w-full h-full backface-hidden ${isFlipped ? 'block' : 'hidden'} rotate-y-180`}>
                     <div className="flex flex-col items-center justify-center h-full bg-gray-200 p-5 shadow-lg">
-                    <h2>Register</h2>
-                        <input type="text" placeholder="Name" className="mt-3 px-2 py-1" />
-                        <input type="email" placeholder="Email" className="mt-3 px-2 py-1" />
-                        <input type="password" placeholder="Password" className="mt-3 px-2 py-1" />
-                        <button className="mt-3 bg-blue-600 text-white px-4 py-2 rounded" onClick={handleFlip}>Back to Login</button>
+                        <h2>Register</h2>
+                        <input type="text" placeholder="Name" className="mt-3 px-2 py-1"/>
+                        <input type="email" placeholder="Email" className="mt-3 px-2 py-1"/>
+                        <input type="password" placeholder="Password" className="mt-3 px-2 py-1"/>
+                        <button className="mt-3 bg-blue-600 text-white px-4 py-2 rounded" onClick={handleRegi}>Registrarse
+                        </button>
+                        <button className="mt-3 bg-blue-600 text-white px-4 py-2 rounded" onClick={handleFlip}>Back to
+                            Login
+                        </button>
                     </div>
                 </div>
             </div>
